@@ -36,29 +36,28 @@ root@ambari1:/data/soft/hadoop/build# dpkg-deb -I hadoop_2.6.0.2.4.2.0-258_all.d
  dpkg-deb -b extract/ build/
  </pre>
 
- <pre>
- Usage: dpkg-deb [option ...] command
-
-Commands:
-  -b|--build [[directory> [[[deb>]   Build an archive.
-  -c|--contents [[deb>              List contents.
-  -I|--info [[deb> [[[cfile> ...]    Show info to stdout.
-  -W|--show [[deb>                  Show information on package(s)
-  -f|--field [[deb> [[[cfield> ...]  Show field(s) to stdout.
-  -e|--control [[deb> [[[directory>] Extract control info.
-  -x|--extract [[deb> [[directory>   Extract files.
-  -X|--vextract [[deb> [[directory>  Extract & list files.
-  -R|--raw-extract [[deb> [[directory>
-                                   Extract control info and files.
-  --fsys-tarfile [[deb>             Output filesystem tarfile.
-
-  -?, --help                       Show this help message.
-      --version                    Show the version.
-
-[[deb> is the filename of a Debian format archive.
-[[cfile> is the name of an administrative file component.
-[[cfield> is the name of a field in the main control file.
- </pre>
+`Usage: dpkg-deb [option ...] command`	
+<pre>
+`Commands:`
+`  -b|--build [[directory> [[[deb>]   Build an archive.`
+`  -c|--contents [[deb>              List contents.`
+`  -I|--info [[deb> [[[cfile> ...]    Show info to stdout.`
+`  -W|--show [[deb>                  Show information on package(s)`
+`  -f|--field [[deb> [[[cfield> ...]  Show field(s) to stdout.`
+`  -e|--control [[deb> [[[directory>] Extract control info.`
+`  -x|--extract [[deb> [[directory>   Extract files.`
+`  -X|--vextract [[deb> [[directory>  Extract & list files.`
+`  -R|--raw-extract [[deb> [[directory>`
+`                                   Extract control info and files.`
+`  --fsys-tarfile [[deb>             Output filesystem tarfile.`
+``
+`  -?, --help                       Show this help message.`
+`      --version                    Show the version.`
+``
+`[[deb> is the filename of a Debian format archive.`
+`[[cfile> is the name of an administrative file component.`
+`[[cfield> is the name of a field in the main control file.`
+</pre>
 
 ##2.  mapreduce.jobhistory.recovery.store.class
 mapdrecueV2中， 2.6.0版本没有提供org.apache.hadoop.mapreduce.v2.hs.HistoryServerLeveldbStateStoreService，需要替换为org.apache.hadoop.mapreduce.v2.hs.HistoryServerFileSystemStateStoreService.
@@ -162,7 +161,7 @@ log4j.appender.EWMA.maxUniqueMessages=${yarn.ewma.maxUniqueMessages}
 </pre>
 
 Hadoop 2.6.0没有相应的log类，仅仅是在2.7.1新加的EWMA类。所以需要定制此类。
-<a href="Log4j/org/apache/hadoop/yarn/util/Log4jWarningErrorMetricsAppender.java">org.apache.hadoop.yarn.util.Log4jWarningErrorMetricsAppender</a>
+<a href="Log4J/org/apache/hadoop/yarn/util/Log4jWarningErrorMetricsAppender.java">org.apache.hadoop.yarn.util.Log4jWarningErrorMetricsAppender</a>
 
 
 ##5.其他配置
