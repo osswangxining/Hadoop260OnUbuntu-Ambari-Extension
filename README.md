@@ -163,6 +163,7 @@ log4j.appender.EWMA.maxUniqueMessages=${yarn.ewma.maxUniqueMessages}
 Hadoop 2.6.0没有相应的log类，仅仅是在2.7.1新加的EWMA类。所以需要定制此类。
 <a href="Log4J/org/apache/hadoop/yarn/util/Log4jWarningErrorMetricsAppender.java">org.apache.hadoop.yarn.util.Log4jWarningErrorMetricsAppender</a>
 
+该类打包成jar，放到/usr/hdp/current/hadoop-yarn-nodemanager/lib下。如果DEB package中已经放置此类，ignore this.
 
 ##5.其他配置
 ####1.HDFS的权限
